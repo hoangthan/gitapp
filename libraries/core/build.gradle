@@ -1,0 +1,19 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
+}
+
+apply from: "${rootDir}/common.gradle"
+
+android {
+    namespace 'com.git.data.core'
+}
+
+dependencies {
+    api libs.coroutines
+    api libs.hilt.android
+    kapt libs.hilt.compiler
+    testImplementation libs.bundles.test.unit
+}
