@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    alias(libs.plugins.kotlin.compose)
     id 'kotlin-kapt'
 }
 
@@ -9,12 +10,12 @@ apply from: "${rootDir}/common.gradle"
 android {
     namespace 'com.git.features.core'
     buildFeatures.compose = true
-    composeOptions.kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
 }
 
 dependencies {
     api project(path: ':libraries:core')
     api libs.bundles.lifecycle
+    api libs.coil.compose
     api platform(libs.androidx.compose.bom)
     api libs.bundles.android.core
     api libs.bundles.compose

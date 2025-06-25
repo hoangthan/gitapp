@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Search User Screen -->
+    <string name="search_github_users">Search GitHub users</string>
+    <string name="search_placeholder">Search GitHub users…</string>
+    <string name="search_icon_description">Search</string>
+    <string name="clear_search_description">Clear search</string>
+    <string name="user_avatar_description">User avatar</string>
+    <string name="no_users_found">No users found</string>
+    <string name="try_different_search">Try a different search term</string>
+    <string name="enter_username_to_start">Enter a username to start searching</string>
+
+    <!-- User Detail Screen -->
+    <string name="back_button_description">Back</string>
+    <string name="repositories_title">Repositories</string>
+    <string name="followers_label">Followers</string>
+    <string name="following_label">Following</string>
+    <string name="no_repositories_found">No repositories found</string>
+    <string name="failed_to_load_repositories">Failed to load repositories</string>
+    <string name="user_not_found">User not found</string>
+    <string name="stars_icon_description">Stars</string>
+
+    <!-- Error Messages -->
+    <string name="error_rate_limit_exceeded">You are searching too much. Please slow down</string>
+    <string name="error_invalid_query">Invalid search query. Please try a different search term.</string>
+    <string name="error_load_data">Failed to load data</string>
+    <string name="retry">Retry</string>
+    <string name="user_details_follower">Followers</string>
+    <string name="user_details_following">Following</string>
+    <string name="user_details_stars">Stars</string>
+    <string name="user_details_repositories">Repositories</string>
+    <string name="user_details_no_repository">There is no repository found</string>
+    <string name="user_details_retry">Retry</string>
+    <string name="unknown_exception" />
+    <string name="user_details_title">User Details</string>
+</resources>

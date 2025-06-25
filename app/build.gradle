@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    alias(libs.plugins.kotlin.compose)
     id 'com.google.dagger.hilt.android'
     id 'kotlin-kapt'
 }
@@ -16,13 +17,28 @@ android {
         versionName "1.0"
     }
 
+    // Add token from local.properties
+    def localProperties = new Properties()
+    def localPropertiesFile = rootProject.file("local.properties")
+    if (localPropertiesFile.exists()) {
+        localProperties.load(localPropertiesFile.newDataInputStream())
+    }
+    def githubToken = localProperties.getProperty("GITHUB_TOKEN") ?: ""
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "GITHUB_TOKEN", "\"${githubToken}\""
+        }
+
+        release {
+            buildConfigField "String", "GITHUB_TOKEN", "\"${githubToken}\""
+            minifyEnabled false
+        }
+    }
+
     buildFeatures {
         compose true
         buildConfig true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion libs.versions.composeCompiler.get()
     }
 }
 
@@ -31,4 +47,6 @@ dependencies {
     implementation libs.hilt.android
     kapt libs.hilt.compiler
     implementation project(path: ':features:core')
+    implementation project(path: ':features:github')
+    implementation libs.bundles.navigation
 }

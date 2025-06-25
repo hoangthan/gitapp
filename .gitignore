@@ -31,3 +31,35 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+# Kotlin compiler
+.kotlin/
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Generated files
+bin/
+gen/
+out/
+
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.aar
+
+# Lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/

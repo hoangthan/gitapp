@@ -1,0 +1,26 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
+}
+
+apply from: "${rootDir}/common.gradle"
+
+android {
+    namespace 'com.git.libraries.github'
+}
+
+dependencies {
+    implementation project(path: ':libraries:core')
+    implementation project(path: ':libraries:network')
+    implementation libs.hilt.android
+    kapt libs.hilt.compiler
+    kapt libs.moshi.kotlin.codegen
+
+    // Test dependencies
+    testImplementation libs.mockk
+    testImplementation libs.turbine
+    testImplementation libs.coroutines.test
+    testImplementation libs.bundles.test
+}

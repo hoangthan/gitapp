@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unknown_exception" />
+    <string name="internet_connection">Connection error, please try again</string>
+    <string name="io_exception">There is exception when read/write the file</string>
+</resources>
